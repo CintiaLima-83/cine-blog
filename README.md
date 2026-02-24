@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+🎬 CineBlog
+Aplicação de blog feita com Next.js 15 (App Router) para resenhas de filmes, Séries/artigos.
 
-First, run the development server:
+📂 Estrutura
+app/page.tsx → Página inicial com listagem dos artigos.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+app/artigos/[slug]/page.tsx → Página dinâmica para cada artigo.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+⚡ Funcionalidades
+Listagem de artigos com título, autor, data e resumo.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Página de detalhe com conteúdo completo.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Metadados dinâmicos (title e description) por artigo.
 
-## Learn More
+Suporte a SSG com generateStaticParams.
 
-To learn more about Next.js, take a look at the following resources:
+🔧 Tecnologias
+Next.js 15
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+React Server Components
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+JSON local ou API externa (ex: TMDB, crudcrud)
 
-## Deploy on Vercel
+Deploy no Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🚀 Deploy
+Aplicação publicada no Vercel: [https://cine-blog-nine.vercel.app/]
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Repositório no GitHub: [https://github.com/CintiaLima-83/cine-blog]
