@@ -9,9 +9,6 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: cine-blog
 
     steps:
       - name: Checkout código
@@ -37,4 +34,5 @@ jobs:
 
       - name: Deploy para Vercel
         run: npx vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
+
 
