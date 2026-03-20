@@ -18,13 +18,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          # removido cache para evitar conflitos
 
-      - name: Instalar dependências
-        run: npm ci
+      - name: Instalar dependências (forçar instalação limpa)
+        run: npm install --force
 
       - name: Rodar ESLint
-        run: npm run lint
+        run: npx next lint --dir .
 
       - name: Rodar testes
         run: npm run test
