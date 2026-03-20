@@ -1,4 +1,4 @@
-name: CI
+name: CI + Deploy
 
 on:
   push:
@@ -7,8 +7,11 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: cine-blog
 
     steps:
       - name: Checkout código
@@ -31,3 +34,7 @@ jobs:
 
       - name: Build da aplicação
         run: npm run build
+
+      - name: Deploy para Vercel
+        run: npx vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
+ 
