@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import filmes from "./data/filmes.json";
 
 export default function HomePage() {
@@ -14,7 +15,13 @@ export default function HomePage() {
         <div className="grid">
           {filmes.map((filme) => (
             <div key={filme.slug} className="card">
-              <img src={filme.image} alt={filme.title} />
+              <Image
+                src={filme.image}
+                alt={filme.title}
+                width={300}
+                height={450}
+                className="rounded"
+              />
               <h2>{filme.title}</h2>
               <p>{filme.description}</p>
               <p>⭐ {filme.rating}/10</p>
@@ -28,7 +35,7 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="footer">
-        <p>© 2026 CineBlog • Criado por Cintia lima</p>
+        <p>© 2026 CineBlog • Criado por Cintia Lima</p>
         <p>Todos os direitos reservados</p>
       </footer>
     </>
