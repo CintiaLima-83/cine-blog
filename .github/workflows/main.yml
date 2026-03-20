@@ -27,10 +27,13 @@ jobs:
         run: npm run lint
 
       - name: Rodar testes
-        run: npm run test --if-present
+        run: npm run test
 
       - name: Build da aplicação
         run: npm run build
+        env:
+          NODE_ENV: production
 
-      - name: Deploy para Vercel
+      - name: Deploy para Vercel (apenas em push)
+        if: github.event_name == 'push'
         run: npx vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
