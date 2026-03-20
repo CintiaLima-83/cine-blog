@@ -34,6 +34,7 @@ jobs:
         env:
           NODE_ENV: production
 
-      - name: Deploy para Vercel (apenas em push)
+      - name: Deploy to Vercel
         if: github.event_name == 'push'
-        run: npx vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
+        run: npx vercel --prod --yes --token=${{ secrets.VERCEL_TOKEN }}
+
