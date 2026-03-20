@@ -24,7 +24,7 @@ jobs:
         run: npm install --force
 
       - name: Rodar ESLint
-        run: npx next lint --dir .
+        run: npx next lint
 
       - name: Rodar testes
         run: npm run test
